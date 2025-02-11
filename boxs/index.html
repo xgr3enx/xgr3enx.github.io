@@ -15,16 +15,33 @@
 <!-- write your code here -->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
-document.addEventListener("visibilitychange", function() {
+// Флаг, чтобы отслеживать, был ли клик
+let userInteracted = false;
+
+// Обработчик клика по странице
+document.addEventListener("click", function() {
+    if (!userInteracted) {
+        userInteracted = true;
+        console.log("User interacted, enabling visibilitychange listener...");
+
+        // Добавляем обработчик visibilitychange после клика
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+    }
+});
+
+// Функция для обработки изменения видимости
+function handleVisibilityChange() {
     if (document.visibilityState === "hidden") {
-        // Находим все аудио-элементы на странице и отключаем звук
-        const audioElements = document.querySelectorAll("audio, video");
-        audioElements.forEach(element => {
+        console.log("Page is hidden, muting media...");
+
+        // Находим все аудио- и видеоэлементы на странице
+        const mediaElements = document.querySelectorAll("audio, video");
+        mediaElements.forEach(element => {
             element.muted = true; // Отключаем звук
             element.pause(); // Останавливаем воспроизведение
         });
     }
-});
+}
 </script>
 <script>
 (function (cjs, an) {
