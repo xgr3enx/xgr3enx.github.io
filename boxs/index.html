@@ -15,12 +15,24 @@
 <!-- write your code here -->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
+document.addEventListener("visibilitychange", function() {
+    if (document.visibilityState === "hidden") {
+        // Находим все аудио-элементы на странице и отключаем звук
+        const audioElements = document.querySelectorAll("audio, video");
+        audioElements.forEach(element => {
+            element.muted = true; // Отключаем звук
+            element.pause(); // Останавливаем воспроизведение
+        });
+    }
+});
+</script>
+<script>
 (function (cjs, an) {
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"index_atlas_P_1", frames: [[3757,0,256,256],[3757,258,256,256],[608,1134,256,256],[2440,1168,256,256],[2698,1168,256,256],[0,1172,256,256],[258,1172,256,256],[866,1195,256,256],[1124,1195,256,256],[1382,1195,256,256],[2956,1295,256,256],[3214,1295,256,256],[3472,1295,256,256],[3730,1295,256,256],[1640,1370,256,256],[1898,1370,256,256],[2156,1370,256,256],[516,1392,256,256],[2414,1426,256,256],[2672,1426,256,256],[0,1430,256,256],[258,1430,256,256],[774,1453,256,256],[1032,1453,256,256],[1290,1453,256,256],[2930,1553,256,256],[3188,1553,256,256],[3446,1553,256,256],[3704,1553,256,256],[1548,1628,256,256],[1806,1628,256,256],[2064,1628,256,256],[516,1650,256,256],[2322,1684,256,256],[2580,1684,256,256],[0,1688,256,256],[258,1688,256,256],[774,1711,256,256],[1032,1711,256,256],[1290,1711,256,256],[2838,1811,256,256],[3096,1811,256,256],[3354,1811,256,256],[0,0,1052,937],[3035,0,720,720],[608,939,434,193],[0,939,606,231],[3757,516,229,100],[1854,1168,584,200],[1054,819,798,374],[3612,1811,468,25],[2108,0,925,908],[1854,910,1080,256],[1054,0,1052,817],[3035,722,884,571],[4015,0,76,76],[4015,78,76,76]]},
-		{name:"index_atlas_NP_1", frames: [[0,0,1920,1080],[1922,0,1080,1920]]}
+		{name:"index_atlas_NP_1", frames: [[0,1922,1920,1080],[1922,0,1080,1920],[0,0,1920,1920]]}
 ];
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
@@ -218,6 +230,10 @@ lib.ssMetadata = [
 (lib._1920_1080_packhot = function() {
 	this.initialize(ss["index_atlas_NP_1"]);
 	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+(lib.bacground = function() {
+	this.initialize(ss["index_atlas_NP_1"]);
+	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 (lib.bacground_for_players = function() {
 	this.initialize(ss["index_atlas_P_1"]);
@@ -594,13 +610,12 @@ if (reversed == null) { reversed = false; }
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1));
 	// Asset_svg
-	this.shape = new cjs.Shape();
-	this.shape.graphics.lf(["#870E21","#231E20"],[0,1],-522,545.8,518.2,-549.7).s().p("EhbOBbQMAAAi2fMC2dAAAMAAAC2fg");
-	this.shape.setTransform(577.7,572.9);
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(2));
+	this.instance = new lib.bacground();
+	this.instance.setTransform(-27,-28,0.6298,0.6298);
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(2));
 	this._renderFirstFrame();
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-6.2,-11,1167.9,1167.9);
+p.nominalBounds = new cjs.Rectangle(-27,-28,1209.3,1209.3);
 (lib.Symbol59 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -1706,7 +1721,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.bg).wait(2));
 	this._renderFirstFrame();
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-1683.2,-265.5,3087.2,1429.3);
+p.nominalBounds = new cjs.Rectangle(-1683.2,-282.5,3087.2,1446.3);
 // library properties:
 lib.properties = {
 	id: '9F6F8A67E6BA6C42BFD916AB6C0CF075',
@@ -1716,8 +1731,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_1.png?1737121692210", id:"index_atlas_P_1"},
-		{src:"index_atlas_NP_1.jpg?1737121692210", id:"index_atlas_NP_1"}
+		{src:"index_atlas_P_1.png", id:"index_atlas_P_1"},
+		{src:"index_atlas_NP_1.jpg", id:"index_atlas_NP_1"}
 	],
 	preloads: []
 };
