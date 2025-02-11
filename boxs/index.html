@@ -15,35 +15,6 @@
 <!-- write your code here -->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script>
-// Флаг, чтобы отслеживать, был ли клик
-let userInteracted = false;
-
-// Обработчик клика по странице
-document.addEventListener("click", function() {
-    if (!userInteracted) {
-        userInteracted = true;
-        console.log("User interacted, enabling visibilitychange listener...");
-
-        // Добавляем обработчик visibilitychange после клика
-        document.addEventListener("visibilitychange", handleVisibilityChange);
-    }
-});
-
-// Функция для обработки изменения видимости
-function handleVisibilityChange() {
-    if (document.visibilityState === "hidden") {
-        console.log("Page is hidden, muting media...");
-
-        // Находим все аудио- и видеоэлементы на странице
-        const mediaElements = document.querySelectorAll("audio, video");
-        mediaElements.forEach(element => {
-            element.muted = true; // Отключаем звук
-            element.pause(); // Останавливаем воспроизведение
-        });
-    }
-}
-</script>
-<script>
 (function (cjs, an) {
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
@@ -1902,6 +1873,42 @@ function handleComplete(evt,comp) {
 	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
+}
+</script>
+<script>
+// Флаг для отслеживания взаимодействия пользователя
+let userInteracted = false;
+
+// Обработчик клика по странице
+document.addEventListener("click", function() {
+    if (!userInteracted) {
+        userInteracted = true;
+        console.log("User interacted, enabling visibilitychange listener...");
+
+        // Добавляем обработчик visibilitychange после клика
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+    }
+});
+
+// Функция для обработки изменения видимости
+function handleVisibilityChange() {
+    if (document.visibilityState === "hidden") {
+        console.log("Page is hidden, muting sound...");
+
+        // Отключаем звук через CreateJS
+        if (window.createjs && window.createjs.Sound) {
+            createjs.Sound.setMute(true); // Отключаем звук
+        } else {
+            console.warn("CreateJS Sound API not found.");
+        }
+    } else {
+        console.log("Page is visible, unmuting sound...");
+
+        // Включаем звук обратно
+        if (window.createjs && window.createjs.Sound) {
+            createjs.Sound.setMute(false); // Включаем звук
+        }
+    }
 }
 </script>
 <!-- write your code here -->
