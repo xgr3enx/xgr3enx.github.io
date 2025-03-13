@@ -799,66 +799,61 @@ if (reversed == null) { reversed = false; }
 		bgMusic.load();
 		var Tap = new Audio('Tap.mp3');
 		Tap.load();
-				// Функция для отключения звука
-		function muteAllSounds() {
-			bgMusic.muted = true; // Отключаем звук
-		}
-		// Функция для включения звука
-		function unmuteAllSounds() {
-		     bgMusic.muted = false; // Включаем звук
-		}
-		// Отслеживаем видимость страницы
-		document.addEventListener("visibilitychange", function() {
-		    if (document.hidden) {
-		        muteAllSounds(); // Если вкладка скрыта, выключаем звук
-		    } else {
-		        unmuteAllSounds(); // Если вкладка снова видима, включаем звук
-		    }
-		});
-		/*
-		let inactivityTimer;
-		// Функция для запуска таймера
-		function startInactivityTimer() {
-		    // Очищаем предыдущий таймер
-		    clearTimeout(inactivityTimer);
-		    // Устанавливаем новый таймер на 10 секунд
-		    inactivityTimer = setTimeout(() => {
-						createjs.Tween.get(endtxt).to({
-					alpha: 1
-				}, 10, createjs.Ease.cubicOut);
-			stopInactivityTimer();
-		                createjs.Tween.get(main.tutor)
-		                    .to({ alpha: 1 }, 500, createjs.Ease.quadOut);
-		                tutorHidden = false;
-		    }, 10000); // 10 секунд
-		}
-		// Функция для сброса таймера при активности
-		function resetInactivityTimer() {
-		    startInactivityTimer();
-		}
-		// Запуск таймера при загрузке страницы
-		startInactivityTimer();
-		// Добавляем обработчики событий для кликов и тапов
-		document.addEventListener("click", resetInactivityTimer);
-		document.addEventListener("touchstart", resetInactivityTimer);
-		function stopInactivityTimer() {
-		  clearTimeout(inactivityTimer); // Остановка таймера
-		}
-		*/
+		var Building_lamp = new Audio('Building_lamp.mp3');
+		Building_lamp.load();
+		var Building_globe = new Audio('Building_globe.mp3');
+		Building_globe.load();
+		var Building_panda = new Audio('Building_panda.mp3');
+		Building_panda.load();
+		var Building_laptop = new Audio('Building_laptop.mp3');
+		Building_laptop.load();
+		var Building_stool = new Audio('Building_stool.mp3');
+		Building_stool.load();
+		var Building_guitar = new Audio('Building_guitar.mp3');
+		Building_guitar.load();
+				function muteAllSounds() {
+					bgMusic.muted = true; // Отключаем звук
+					Tap.muted = true; // Отключаем звук
+					Building_lamp.muted = true; // Отключаем звук
+					Building_globe.muted = true; // Отключаем звук
+					Building_panda.muted = true; // Отключаем звук
+					Building_laptop.muted = true; // Отключаем звук
+					Building_stool.muted = true; // Отключаем звук
+					Building_guitar.muted = true; // Отключаем звук
+				}
+				// Функция для включения звука
+				function unmuteAllSounds() {
+					bgMusic.muted = false; // Включаем звук
+					Tap.muted = false; // Отключаем звук
+					Building_lamp.muted = false; // Отключаем звук
+					Building_globe.muted = false; // Отключаем звук
+					Building_panda.muted = false; // Отключаем звук
+					Building_laptop.muted = false; // Отключаем звук
+					Building_stool.muted = false; // Отключаем звук
+					Building_guitar.muted = false; // Отключаем звук
+				}
+				// Отслеживаем видимость страницы
+				document.addEventListener("visibilitychange", function() {
+				    if (document.hidden) {
+				        muteAllSounds(); // Если вкладка скрыта, выключаем звук
+				    } else {
+				        unmuteAllSounds(); // Если вкладка снова видима, включаем звук
+				    }
+				});
+				btn_music.addEventListener("click", function () {
+					if (counter_sound == 0) {
+						btn_music.gotoAndStop(1);
+						counter_sound = 1;
+					muteAllSounds();
+					} else {
+						btn_music.gotoAndStop(0);
+						counter_sound = 0;
+						unmuteAllSounds();
+					}
+				});
 		stage.on('click', function() {
 		    Tap.play(); // Проигрывание звука при клике
 		    bgMusic.play(); // Проигрывание музыки
-		});
-		btn_music.addEventListener("click", function() {
-				if (counter_sound == 0) {
-				btn_music.gotoAndStop(1);
-				counter_sound = 1;
-				createjs.Sound.setMute(false);
-				} else {
-				btn_music.gotoAndStop(0);
-				counter_sound = 0;
-				createjs.Sound.setMute(true);
-				}
 		});
 		// Звуки для каждого объекта
 		var soundMap = {
@@ -1094,7 +1089,7 @@ an.getComposition = function(id) {
 	return an.compositions[id];
 }
 an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
-	var lastW, lastH, lastS=1;	
+	var lastW, lastH, lastS=1;		
 	function resizeCanvas() {			
 		var w = lib.properties.width, h = lib.properties.height;			
 		var iw = window.innerWidth, ih=window.innerHeight;			
