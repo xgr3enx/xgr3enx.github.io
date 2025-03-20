@@ -7,7 +7,6 @@ lib.ssMetadata = [
 		{name:"index_atlas_NP_1", frames: [[0,1922,1920,1080],[0,0,1278,1920],[1922,1922,1920,1080],[2560,0,1260,1920],[0,3004,1920,1080],[1280,0,1278,1920]]}
 ];
 
-
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
 	this.ignorePause = false;
