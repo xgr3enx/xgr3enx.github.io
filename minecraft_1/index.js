@@ -1255,7 +1255,7 @@ if (reversed == null) { reversed = false; }
 								
 								main.x = clientWidth / 2;
 						        main.y = clientHeight / 2;
-						        main.scaleX = clientHeight / 1020;
+						        main.scaleX = clientHeight / 1010;
 						        main.scaleY = main.scaleX;
 									
 								btn_music.x = clientWidth;
