@@ -1256,7 +1256,7 @@ if (reversed == null) { reversed = false; }
 								
 								main.x = clientWidth / 2;
 						        main.y = clientHeight / 2;
-						        main.scaleX = clientHeight / 900;
+						        main.scaleX = clientHeight / 1020;
 						        main.scaleY = main.scaleX;
 									
 								btn_music.x = clientWidth;
@@ -1281,7 +1281,6 @@ if (reversed == null) { reversed = false; }
 						}
 						
 					if (clientHeight / clientWidth > .69){
-				        bg.gotoAndStop("horiz");
 				        main.gotoAndStop("horiz");
 						
 				        main.x = clientWidth / 2;
