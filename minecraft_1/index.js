@@ -944,13 +944,13 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},20).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_1}]},12).to({state:[{t:this.instance_1}]},13).to({state:[{t:this.instance_1}]},10).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(20).to({_off:false},0).to({alpha:1},9).to({regY:49.1,scaleX:0.8016,scaleY:0.8016,rotation:-14.9991,x:43.65,y:49.1},12).to({regY:49,scaleX:1,scaleY:1,rotation:0,x:43.5,y:49},13).to({alpha:0},10).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},20).to({state:[{t:this.instance_1}]},6).to({state:[{t:this.instance_1}]},7).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_1}]},7).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(20).to({_off:false},0).to({alpha:1},6).to({regY:49.1,scaleX:0.8016,scaleY:0.8016,rotation:-14.9991,x:43.65,y:49.1},7).to({regY:49,scaleX:1,scaleY:1,rotation:0,x:43.5,y:49},9).to({alpha:0},7).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-1,-0.3,89.2,98.6);
+p.nominalBounds = new cjs.Rectangle(-1,-0.2,89.2,98.5);
 
 
 (lib.Symbol3 = function(mode,startPosition,loop,reversed) {
