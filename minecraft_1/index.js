@@ -7,6 +7,7 @@ lib.ssMetadata = [
 		{name:"index_atlas_NP_1", frames: [[0,1922,1920,1080],[0,0,1278,1920],[1922,1922,1920,1080],[2560,0,1260,1920],[0,3004,1920,1080],[1280,0,1278,1920]]}
 ];
 
+
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
 	this.ignorePause = false;
@@ -530,7 +531,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_29 = new lib.com_idle_povorot_girl28();
 	this.instance_29.setTransform(-265,-78,2.7291,2.7291);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.instance_4}]},1).to({state:[{t:this.instance_5}]},1).to({state:[{t:this.instance_6}]},1).to({state:[{t:this.instance_7}]},1).to({state:[{t:this.instance_8}]},1).to({state:[{t:this.instance_9}]},1).to({state:[{t:this.instance_10}]},1).to({state:[{t:this.instance_11}]},1).to({state:[{t:this.instance_12}]},1).to({state:[{t:this.instance_13}]},1).to({state:[{t:this.instance_14}]},1).to({state:[{t:this.instance_15}]},1).to({state:[{t:this.instance_16}]},1).to({state:[{t:this.instance_17}]},1).to({state:[{t:this.instance_18}]},1).to({state:[{t:this.instance_19}]},1).to({state:[{t:this.instance_20}]},1).to({state:[{t:this.instance_21}]},1).to({state:[{t:this.instance_22}]},1).to({state:[{t:this.instance_23}]},1).to({state:[{t:this.instance_24}]},1).to({state:[{t:this.instance_25}]},1).to({state:[{t:this.instance_26}]},1).to({state:[{t:this.instance_27}]},1).to({state:[{t:this.instance_28}]},1).to({state:[{t:this.instance_29}]},1).to({state:[{t:this.instance}]},1).wait(12));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_3}]},2).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_5}]},2).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_7}]},2).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_9}]},2).to({state:[{t:this.instance_10}]},2).to({state:[{t:this.instance_11}]},2).to({state:[{t:this.instance_12}]},2).to({state:[{t:this.instance_13}]},2).to({state:[{t:this.instance_14}]},2).to({state:[{t:this.instance_15}]},2).to({state:[{t:this.instance_16}]},2).to({state:[{t:this.instance_17}]},2).to({state:[{t:this.instance_18}]},2).to({state:[{t:this.instance_19}]},2).to({state:[{t:this.instance_20}]},2).to({state:[{t:this.instance_21}]},2).to({state:[{t:this.instance_22}]},2).to({state:[{t:this.instance_23}]},2).to({state:[{t:this.instance_24}]},2).to({state:[{t:this.instance_25}]},2).to({state:[{t:this.instance_26}]},2).to({state:[{t:this.instance_27}]},2).to({state:[{t:this.instance_28}]},2).to({state:[{t:this.instance_29}]},2).to({state:[{t:this.instance}]},2).wait(48));
 
 	this._renderFirstFrame();
 
@@ -943,8 +944,8 @@ if (reversed == null) { reversed = false; }
 	this.instance_1.alpha = 0;
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},20).to({state:[{t:this.instance_1}]},6).to({state:[{t:this.instance_1}]},7).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_1}]},7).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(20).to({_off:false},0).to({alpha:1},6).to({regY:49.1,scaleX:0.8016,scaleY:0.8016,rotation:-14.9991,x:43.65,y:49.1},7).to({regY:49,scaleX:1,scaleY:1,rotation:0,x:43.5,y:49},9).to({alpha:0},7).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},20).to({state:[{t:this.instance_1}]},9).to({state:[{t:this.instance_1}]},10).to({state:[{t:this.instance_1}]},16).to({state:[{t:this.instance_1}]},9).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(20).to({_off:false},0).to({alpha:1},9).to({regY:49.1,scaleX:0.8016,scaleY:0.8016,rotation:-14.9991,x:43.65,y:49.1},10).to({regY:49,scaleX:1,scaleY:1,rotation:0,x:43.5,y:49},16).to({alpha:0},9).wait(1));
 
 	this._renderFirstFrame();
 
@@ -1336,7 +1337,7 @@ lib.properties = {
 	id: '9F6F8A67E6BA6C42BFD916AB6C0CF075',
 	width: 1,
 	height: 1,
-	fps: 24,
+	fps: 35,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
