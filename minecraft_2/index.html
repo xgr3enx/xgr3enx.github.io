@@ -20,7 +20,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"index_atlas_P_1", frames: [[0,1231,772,140],[424,922,158,154],[606,740,92,168],[0,740,422,489],[0,0,655,738],[657,177,97,102],[657,590,67,101],[657,487,89,101],[657,281,97,101],[657,74,101,101],[657,384,91,101],[626,1070,112,139],[424,1078,200,120],[657,0,178,72],[584,922,152,146],[700,693,65,65],[726,590,65,65],[424,740,180,180]]},
-		{name:"index_atlas_NP_1", frames: [[0,2370,2448,1408],[0,0,1496,2368]]}
+		{name:"index_atlas_NP_1", frames: [[0,2370,2448,1408],[0,0,1840,2368]]}
 ];
 (lib.AnMovieClip = function(){
 	this.actionFrames = [];
@@ -608,10 +608,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
 	// Layer_1
 	this.instance = new lib.BG_vertical();
-	this.instance.setTransform(129,-134,0.5974,0.5974);
+	this.instance.setTransform(28,-134,0.5974,0.5974);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 	this._renderFirstFrame();
-}).prototype = getMCSymbolPrototype(lib.bg, new cjs.Rectangle(129,-134,893.7,1414.6), null);
+}).prototype = getMCSymbolPrototype(lib.bg, new cjs.Rectangle(28,-134,1099.2,1414.6), null);
 (lib.Symbol6 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -720,7 +720,7 @@ if (reversed == null) { reversed = false; }
 	this.obj22 = new lib.Symbol48();
 	this.obj22.name = "obj22";
 	this.obj22.setTransform(-911.1,539.6,1,1,0,0,0,47.9,46.6);
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.obj22,p:{y:539.6}},{t:this.obj11,p:{y:643.1}},{t:this.obj66,p:{y:461.9}},{t:this.obj33,p:{y:668.8}},{t:this.obj44,p:{y:665.3}},{t:this.obj55,p:{y:789.5}}]}).to({state:[{t:this.obj22,p:{y:508.6}},{t:this.obj11,p:{y:636.3}},{t:this.obj66,p:{y:406.05}},{t:this.obj33,p:{y:662}},{t:this.obj44,p:{y:658.5}},{t:this.obj55,p:{y:782.7}}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.obj22,p:{y:539.6}},{t:this.obj11,p:{y:643.1}},{t:this.obj66,p:{x:-768.1,y:461.9}},{t:this.obj33,p:{y:668.8}},{t:this.obj44,p:{x:-610.4,y:665.3}},{t:this.obj55,p:{y:789.5}}]}).to({state:[{t:this.obj22,p:{y:508.6}},{t:this.obj11,p:{y:633.35}},{t:this.obj66,p:{x:-766.15,y:406.05}},{t:this.obj33,p:{y:662}},{t:this.obj44,p:{x:-603.2,y:657.7}},{t:this.obj55,p:{y:782.7}}]},1).wait(1));
 	// Layer_5
 	this.hand = new lib.Symbol6();
 	this.hand.name = "hand";
@@ -916,11 +916,11 @@ if (reversed == null) { reversed = false; }
 		            clickCount++; // Увеличиваем счетчик кликов
 		            setTimeout(() => {
 		                // После третьего клика, переходим по ссылке
-		                if (clickCount === 3) {
+		                if (clickCount === 4) {
 		                    window.location.href = redirectUrl; // Переход по ссылке
 							tutorHidden = true;
 		                }
-		            }, 500);
+		            }, 100);
 		            // Разблокировка кликов через 1 секунду
 		            setTimeout(() => {
 		                isClickDisabled = false;
@@ -1078,6 +1078,8 @@ an.getComposition = function(id) {
 }
 an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
 	var lastW, lastH, lastS=1;		
+	window.addEventListener('resize', resizeCanvas);		
+	resizeCanvas();		
 	function resizeCanvas() {			
 		var w = lib.properties.width, h = lib.properties.height;			
 		var iw = window.innerWidth, ih=window.innerHeight;			
