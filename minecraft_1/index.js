@@ -2921,7 +2921,7 @@ if (reversed == null) { reversed = false; }
 	this.man1.name = "man1";
 	this.man1.setTransform(-990.55,656.05,0.5685,0.5685,0,0,0,231.3,543.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.man1,p:{regX:231.3,regY:543.4,scaleX:0.5685,scaleY:0.5685,x:-990.55,y:656.05}},{t:this.man2,p:{regY:543.4,scaleX:0.5779,scaleY:0.5779,x:-991.2,y:654.8}},{t:this.man3,p:{scaleX:0.5685,scaleY:0.5685,x:-995,y:658.25}}]}).to({state:[{t:this.man3,p:{scaleX:0.5198,scaleY:0.5198,x:-744.4,y:480.6}},{t:this.man1,p:{regX:231.2,regY:543.5,scaleX:0.5198,scaleY:0.5198,x:-740.4,y:478.6}},{t:this.man2,p:{regY:543.5,scaleX:0.5285,scaleY:0.5285,x:-739.95,y:477.45}}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.man1,p:{regX:231.3,regY:543.4,scaleX:0.5685,scaleY:0.5685,x:-990.55,y:656.05}},{t:this.man2,p:{regY:543.4,scaleX:0.5779,scaleY:0.5779,x:-991.2,y:654.8}},{t:this.man3,p:{regX:231.2,regY:543.4,scaleX:0.5685,scaleY:0.5685,x:-995,y:658.25}}]}).to({state:[{t:this.man3,p:{regX:231.1,regY:543.5,scaleX:0.4379,scaleY:0.4379,x:-731.8,y:498.8}},{t:this.man1,p:{regX:231.2,regY:543.5,scaleX:0.4379,scaleY:0.4379,x:-728.4,y:497.1}},{t:this.man2,p:{regY:543.5,scaleX:0.4452,scaleY:0.4452,x:-728,y:496.1}}]},1).wait(1));
 
 	// bg
 	this.bg = new lib.bgcopy();
