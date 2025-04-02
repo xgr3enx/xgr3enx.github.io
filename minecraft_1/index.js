@@ -2739,13 +2739,13 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Layer_1
-	this.instance = new lib.map_1_horiz();
+	this.instance = new lib.map_3_horiz();
 	this.instance.setTransform(-173,150,0.7835,0.7835);
 
-	this.instance_1 = new lib.map_3_horiz();
+	this.instance_1 = new lib.map_2_horiz();
 	this.instance_1.setTransform(-173,150,0.7835,0.7835);
 
-	this.instance_2 = new lib.map_2_horiz();
+	this.instance_2 = new lib.map_1_horiz();
 	this.instance_2.setTransform(-173,150,0.7835,0.7835);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
@@ -2782,14 +2782,14 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Layer_1
-	this.instance = new lib.map_1_vert();
-	this.instance.setTransform(106,-134,0.7368,0.7368);
+	this.instance = new lib.map_3_vert();
+	this.instance.setTransform(106,-155,0.7477,0.7477);
 
-	this.instance_1 = new lib.map_3_vert();
+	this.instance_1 = new lib.map_2_vert();
 	this.instance_1.setTransform(106,-155,0.7477,0.7477);
 
-	this.instance_2 = new lib.map_2_vert();
-	this.instance_2.setTransform(106,-155,0.7477,0.7477);
+	this.instance_2 = new lib.map_1_vert();
+	this.instance_2.setTransform(106,-134,0.7368,0.7368);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
 
@@ -2890,23 +2890,23 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.txt).wait(1).to({regY:111.7,scaleX:0.5664,scaleY:0.5664,x:-751.75,y:196.45},0).wait(1));
 
 	// Layer_3
-	this.btn_1 = new lib.Symbol12();
-	this.btn_1.name = "btn_1";
-	this.btn_1.setTransform(-542.2,538.65,0.391,0.391,0,0,0,353.8,128.7);
+	this.btn1 = new lib.Symbol12();
+	this.btn1.name = "btn1";
+	this.btn1.setTransform(-542.2,538.65,0.391,0.391,0,0,0,353.8,128.7);
 
-	this.btn_2 = new lib.Symbol11();
-	this.btn_2.name = "btn_2";
-	this.btn_2.setTransform(-541.85,659.75,0.391,0.391,0,0,0,361.7,149.2);
+	this.btn2 = new lib.Symbol11();
+	this.btn2.name = "btn2";
+	this.btn2.setTransform(-541.85,659.75,0.391,0.391,0,0,0,361.7,149.2);
 
-	this.btn_3 = new lib.Symbol10();
-	this.btn_3.name = "btn_3";
-	this.btn_3.setTransform(-545.3,765.4,0.391,0.391,0,0,0,353.9,128.8);
+	this.btn3 = new lib.Symbol10();
+	this.btn3.name = "btn3";
+	this.btn3.setTransform(-545.3,765.4,0.391,0.391,0,0,0,353.9,128.8);
 
 	this.btn_4 = new lib.Symbol9();
 	this.btn_4.name = "btn_4";
 	this.btn_4.setTransform(-544.9,875.55,0.391,0.391,0,0,0,344.8,120.8);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.btn_4,p:{regX:344.8,regY:120.8,scaleX:0.391,scaleY:0.391,x:-544.9,y:875.55}},{t:this.btn_3,p:{regY:128.8,scaleX:0.391,scaleY:0.391,x:-545.3,y:765.4}},{t:this.btn_2,p:{scaleX:0.391,scaleY:0.391,x:-541.85,y:659.75}},{t:this.btn_1,p:{regX:353.8,scaleX:0.391,scaleY:0.391,x:-542.2,y:538.65}}]}).to({state:[{t:this.btn_4,p:{regX:344.7,regY:120.7,scaleX:0.3438,scaleY:0.3438,x:-759.1,y:1095.85}},{t:this.btn_3,p:{regY:128.7,scaleX:0.3438,scaleY:0.3438,x:-759.4,y:999.05}},{t:this.btn_2,p:{scaleX:0.3438,scaleY:0.3438,x:-756.35,y:906.15}},{t:this.btn_1,p:{regX:353.9,scaleX:0.3438,scaleY:0.3438,x:-756.65,y:799.7}}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.btn_4,p:{regX:344.8,regY:120.8,scaleX:0.391,scaleY:0.391,x:-544.9,y:875.55}},{t:this.btn3,p:{regY:128.8,scaleX:0.391,scaleY:0.391,x:-545.3,y:765.4}},{t:this.btn2,p:{scaleX:0.391,scaleY:0.391,x:-541.85,y:659.75}},{t:this.btn1,p:{regX:353.8,scaleX:0.391,scaleY:0.391,x:-542.2,y:538.65}}]}).to({state:[{t:this.btn_4,p:{regX:344.7,regY:120.7,scaleX:0.3438,scaleY:0.3438,x:-759.1,y:1095.85}},{t:this.btn3,p:{regY:128.7,scaleX:0.3438,scaleY:0.3438,x:-759.4,y:999.05}},{t:this.btn2,p:{scaleX:0.3438,scaleY:0.3438,x:-756.35,y:906.15}},{t:this.btn1,p:{regX:353.9,scaleX:0.3438,scaleY:0.3438,x:-756.65,y:799.7}}]},1).wait(1));
 
 	// Layer_5
 	this.man3 = new lib.Symbol15();
@@ -3034,21 +3034,23 @@ if (reversed == null) { reversed = false; }
 		}
 		
 		// Инициализация элементов
-		main.btns = [main.btn_1, main.btn_2, main.btn_3];
+		main.btns = [main.btn1, main.btn2, main.btn3];
 		main.mans = [main.man1, main.man2, main.man3];
 		main.tutor = main.tutor;
 		main.locked = false;
-		main.activeBtn = main.btn_1; // Изначально активна первая кнопка
+		main.activeBtn = main.btn1; // Изначально активна первая кнопка
 		main.activeMan = main.man1;  // Изначально активен первый man
-		
+		const bgFrames = ["map1", "map2", "map3"];
+		let currentBgFrame = 0;
+		let currentBgFrame2 = 0;
 		// Инициализация начального состояния
 		main.mans.forEach((man, index) => {
 		    man.alpha = index === 0 ? 1 : 0; // Показываем только man1
 		});
 		main.tutor.alpha = 1;
-		updateBtnState(main.btn_1, 1); // Первая кнопка изначально нажата
+		updateBtnState(main.btn1, 1); // Первая кнопка изначально нажата
 		
-		// Обработчики для кнопок btn_1 - btn_3
+		// Обработчики для кнопок btn1 - btn3
 		main.btns.forEach((btn, index) => {
 		    btn.addEventListener("click", () => {
 		        if (main.locked) {
@@ -3063,8 +3065,10 @@ if (reversed == null) { reversed = false; }
 		            updateBtnState(btn, 3, true);
 		            
 		            // Обновляем фон
-		            main.bg.gotoAndStop(index + 1);
-		            main.bg2.gotoAndStop(index + 1);
+		            main.bg.gotoAndStop(bgFrames[index]);
+		            main.bg2.gotoAndStop(bgFrames[index]);
+					currentBgFrame = index;
+		            currentBgFrame2 = index;
 		            return;
 		        }
 		
@@ -3137,7 +3141,6 @@ if (reversed == null) { reversed = false; }
 			canvas.height = height;
 			context.drawImage(tempContext.canvas, 0, 0);
 		};
-		
 		function onResize(event) {
 		    const isVertical = document.documentElement.clientWidth < document.documentElement.clientHeight;
 		    const clientWidth = document.documentElement.clientWidth;
@@ -3174,8 +3177,9 @@ if (reversed == null) { reversed = false; }
 								}
 								} else { // Обработка горизонтальной ориентации
 					
+									main.gotoAndStop("horiz");
+									
 					if (clientHeight / clientWidth < .69){
-				        main.gotoAndStop("horiz");
 						
 				        main.x = clientWidth / 2;
 				        main.y = clientHeight / 2;
@@ -3189,7 +3193,6 @@ if (reversed == null) { reversed = false; }
 						}
 						
 					if (clientHeight / clientWidth > .69){
-				        main.gotoAndStop("horiz");
 						
 				        main.x = clientWidth / 2;
 				        main.y = clientHeight / 2;
@@ -3204,6 +3207,9 @@ if (reversed == null) { reversed = false; }
 				    }
 				    // Перерисовываем канвас (если это нужно)
 				    resizeCanvas(canvas, ctx, clientWidth, clientHeight);
+				
+					main.bg.gotoAndStop(currentBgFrame);
+					main.bg2.gotoAndStop(currentBgFrame2);
 				}
 		
 		// Запускаем функцию на resize и при старте
@@ -3239,7 +3245,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-1683.2,-388.5,2760.7,1552.3);
+p.nominalBounds = new cjs.Rectangle(-1683.2,-409.5,2760.7,1573.3);
 // library properties:
 lib.properties = {
 	id: '9F6F8A67E6BA6C42BFD916AB6C0CF075',
@@ -3249,8 +3255,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_1.png", id:"index_atlas_P_1"},
-		{src:"index_atlas_NP_1.jpg", id:"index_atlas_NP_1"}
+		{src:"index_atlas_P_1.png?1743587077516", id:"index_atlas_P_1"},
+		{src:"index_atlas_NP_1.jpg?1743587077516", id:"index_atlas_NP_1"}
 	],
 	preloads: []
 };
