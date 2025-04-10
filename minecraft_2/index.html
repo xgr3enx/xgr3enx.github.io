@@ -817,6 +817,7 @@ if (reversed == null) { reversed = false; }
 		var counter_sound = 0;
 		var bgMusic = new Audio('Music_Ocean_Floor.mp3');
 		bgMusic.load();
+		bgMusic.volume = 0.5;
 		var Tap = new Audio('Tap.mp3');
 		Tap.load();
 		var Building_lamp = new Audio('Building_lamp.mp3');
@@ -877,12 +878,12 @@ if (reversed == null) { reversed = false; }
 		});
 		// Звуки для каждого объекта
 		var soundMap = {
-		    obj11: new Audio('Building_lamp.mp3'),
-		    obj22: new Audio('Building_globe.mp3'),
-		    obj33: new Audio('Building_panda.mp3'),
-		    obj44: new Audio('Building_laptop.mp3'),
-		    obj55: new Audio('Building_stool.mp3'),
-		    obj66: new Audio('Building_guitar.mp3')
+		    obj11: Building_lamp,
+		    obj22: Building_globe,
+		    obj33: Building_panda,
+		    obj44: Building_laptop,
+		    obj55: Building_stool,
+		    obj66: Building_guitar
 		};
 		// Загружаем звуки
 		Object.values(soundMap).forEach(sound => sound.load());

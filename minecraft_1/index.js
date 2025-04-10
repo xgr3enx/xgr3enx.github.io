@@ -2510,18 +2510,17 @@ if (reversed == null) { reversed = false; }
 	this.instance_1 = new lib.man1_btn_click();
 	this.instance_1.setTransform(-8,0);
 
-	this.instance_2 = new lib.map3_btn();
-	this.instance_2.setTransform(0,8);
+	this.instance_2 = new lib.map1_btn();
+	this.instance_2.setTransform(8,9);
 
-	this.instance_3 = new lib.map3_btn_click();
-	this.instance_3.setTransform(-8,0);
+	this.instance_3 = new lib.map1_btn_click();
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-8,0,708,257);
+p.nominalBounds = new cjs.Rectangle(-8,0,716,257);
 
 
 (lib.Symbol11 = function(mode,startPosition,loop,reversed) {
@@ -2605,17 +2604,18 @@ if (reversed == null) { reversed = false; }
 
 	this.instance_1 = new lib.man3_btn_clickpngcopy();
 
-	this.instance_2 = new lib.map1_btn();
-	this.instance_2.setTransform(8,9);
+	this.instance_2 = new lib.map3_btn();
+	this.instance_2.setTransform(0,8);
 
-	this.instance_3 = new lib.map1_btn_click();
+	this.instance_3 = new lib.map3_btn_click();
+	this.instance_3.setTransform(-8,0);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).to({state:[{t:this.instance_3}]},1).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,708,257);
+p.nominalBounds = new cjs.Rectangle(-8,0,716,257);
 
 
 (lib.Symbol9 = function(mode,startPosition,loop,reversed) {
@@ -2739,13 +2739,13 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Layer_1
-	this.instance = new lib.map_3_horiz();
+	this.instance = new lib.map_1_horiz();
 	this.instance.setTransform(-173,150,0.7835,0.7835);
 
 	this.instance_1 = new lib.map_2_horiz();
 	this.instance_1.setTransform(-173,150,0.7835,0.7835);
 
-	this.instance_2 = new lib.map_1_horiz();
+	this.instance_2 = new lib.map_3_horiz();
 	this.instance_2.setTransform(-173,150,0.7835,0.7835);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
@@ -2782,14 +2782,14 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Layer_1
-	this.instance = new lib.map_3_vert();
-	this.instance.setTransform(106,-155,0.7477,0.7477);
+	this.instance = new lib.map_1_vert();
+	this.instance.setTransform(106,-134,0.7368,0.7368);
 
 	this.instance_1 = new lib.map_2_vert();
 	this.instance_1.setTransform(106,-155,0.7477,0.7477);
 
-	this.instance_2 = new lib.map_1_vert();
-	this.instance_2.setTransform(106,-134,0.7368,0.7368);
+	this.instance_2 = new lib.map_3_vert();
+	this.instance_2.setTransform(106,-155,0.7477,0.7477);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
 
@@ -2974,6 +2974,9 @@ if (reversed == null) { reversed = false; }
 		var counter_sound = 0;
 		var bgMusic = new Audio('background_music.mp3');
 		bgMusic.load();
+		if (bgMusic != null) {
+		    bgMusic.volume = 0.3; // громкость от 0.0 до 1.0
+		}
 		var Tap = new Audio('Tap.mp3');
 		Tap.load();
 		
@@ -3117,6 +3120,7 @@ if (reversed == null) { reversed = false; }
 		    main.btns.forEach(btn => {
 		        updateBtnState(btn, 2, true);
 		    });
+			updateBtnState(main.btn1, 3);
 		    updateBtnState(main.btn_4, 1, true);
 		});
 		
@@ -3245,7 +3249,7 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(-1683.2,-409.5,2760.7,1573.3);
+p.nominalBounds = new cjs.Rectangle(-1683.2,-388.5,2760.7,1552.3);
 // library properties:
 lib.properties = {
 	id: '9F6F8A67E6BA6C42BFD916AB6C0CF075',
@@ -3255,8 +3259,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_1.png?1743587077516", id:"index_atlas_P_1"},
-		{src:"index_atlas_NP_1.jpg?1743587077516", id:"index_atlas_NP_1"}
+		{src:"index_atlas_P_1.png", id:"index_atlas_P_1"},
+		{src:"index_atlas_NP_1.jpg", id:"index_atlas_NP_1"}
 	],
 	preloads: []
 };
