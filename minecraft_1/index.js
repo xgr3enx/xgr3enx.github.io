@@ -3120,8 +3120,9 @@ if (reversed == null) { reversed = false; }
 		    main.btns.forEach(btn => {
 		        updateBtnState(btn, 2, true);
 		    });
-			updateBtnState(main.btn1, 3);
 		    updateBtnState(main.btn_4, 1, true);
+		    main.activeBtn = main.btn1;
+		    updateBtnState(main.btn1, 3); // 3 - это состояние выбранной кнопки
 		});
 		
 		// Предполагаемая инициализация сцены (добавьте это, если еще не сделано)
