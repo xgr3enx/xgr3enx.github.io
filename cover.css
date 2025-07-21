@@ -137,6 +137,7 @@ body {
     user-select: none;
 }
 
+li::marker{color:#000}
 
 .lines{
 margin-top: -30px;
@@ -154,6 +155,12 @@ img.logo{width: 100%;
 
 .iconss{width:35px}
 .iconsss{width:27px}
+
+.modal-header {justify-content: space-between;}
+
+.modal-body p,.modal-body h1,.modal-body h2{font-size:14px;color:#000;text-shadow:none;text-align:left;line-height:1}
+.modal-body p{margin-bottom: 0.5rem;}
+.modal-dialog{max-width:60%}
 
 p{color: #1ED65B;font-size: 60px;line-height: 1.1;}
 
@@ -201,6 +208,7 @@ margin-right: -13px;
   @media (max-width:768px) {
     .bgtext0 {margin-top: -57vw;}
     a {font-size: 5vw;}
+	.modal-dialog{max-width:90%}
   }
 
   @media (max-width:575px) {
