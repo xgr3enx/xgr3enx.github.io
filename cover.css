@@ -130,15 +130,6 @@ body {
 	color: #1ED65B;
 }
 
-
-#statusMessage {
-    margin-top: 10px;
-    text-align: center;
-    color: red;
-	font-size: 20px;
-}
-
-
 .plus {
     color: #1ED65B;
     font-size: 40px;
