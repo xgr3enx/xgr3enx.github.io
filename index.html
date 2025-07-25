@@ -689,7 +689,7 @@
     e.preventDefault();
     emailjs.sendForm('service_b5c71n1', 'template_wh2h4ji', this)
     .then(response => response.text())
-    .then(data => {
+    .then(() => {
         document.getElementById('statusMessage').textContent = 'Сообщение успешно отправлено!';
         this.reset();
     })
