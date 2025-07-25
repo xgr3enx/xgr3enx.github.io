@@ -28,7 +28,18 @@ body {
 /*
  * Header
  */
-
+	 
+.nav-link {
+ background-color: #169f44 !important;
+  border: none!important;
+  border-radius: 0!important;
+  margin: 0 1vw!important;
+  color:#000!important;
+ }
+.nav-link.active {
+ background-color: #1ed65b!important;
+ }
+ 
 .nav-masthead .nav-link {
   color: rgba(255, 255, 255, .5);
   border-bottom: .25rem solid transparent;
@@ -205,12 +216,27 @@ margin-right: -13px;
   }
 
   @media (max-width:768px) {
-    .bgtext0 {margin-top: -57vw;}
+	  .linecenter {width: 70%;}
+	  p.text2 {font-size: 40px;}
+	  .contact-form input, .contact-form textarea {
+  font-size: 16px;
+  padding: 15px 20px;
+	  margin-bottom: 20px;}
+	  .contact-form button {
+	  padding: 10px 30px;margin-bottom:20px}
+	 .nav-item{margin: 5px 0;}
+	 .bgtext0 {margin-top: -57vw;}
     a {font-size: 5vw;}
 	.modal-dialog{max-width:90%}
   }
 
   @media (max-width:575px) {
+	  p.text2 {font-size: 26px;}
+	  .bgtext00{max-height:100px;object-fit:contain;margin-top: 40px;}
+	  .carousel-control-next {
+	  right: -10px;}
+  .carousel-control-prev {
+  left: -10px;}
     p.text {font-size: 7vw;}
     .bgtext1,.bgtext0 {display: none;}
     img.logo {margin-top: -31.5vw;}
