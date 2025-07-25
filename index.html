@@ -679,25 +679,18 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
 <script>Inputmask("+7 (999) 999-99-99").mask("#phone");</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // отменяем перезагрузку страницы
+  (function(){
+    emailjs.init("C0wYuu0RG71UmBfGs");   // ← замените
+  })();
 
-    const formData = new FormData(this);
-
-    fetch('send.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('statusMessage').textContent = 'Сообщение успешно отправлено!';
-        this.reset();
-    })
-    .catch(error => {
-        document.getElementById('statusMessage').textContent = 'Ошибка отправки. Попробуйте позже.';
-    });
-});
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    emailjs.sendForm('service_b5c71n1', 'template_wh2h4ji', this)
+      .then(() => alert('Сообщение отправлено!'))
+      .catch(err => alert('Ошибка: ' + JSON.stringify(err)));
+  });
 </script>
 <script>
 function smoothScroll(target, duration = 600) {
