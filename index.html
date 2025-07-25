@@ -686,15 +686,16 @@
   })();
 
   document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    emailjs.sendForm('service_b5c71n1', 'template_wh2h4ji', this)
-    .then(response => response.text())
+  e.preventDefault();
+
+  emailjs.sendForm('service_b5c71n1', 'template_wh2h4ji', this)
     .then(() => {
-        document.getElementById('statusMessage').textContent = 'Сообщение успешно отправлено!';
-        this.reset();
+      document.getElementById('statusMessage').textContent = 'Сообщение успешно отправлено!';
+      this.reset();
     })
     .catch(err => {
-        document.getElementById('statusMessage').textContent = 'Ошибка отправки. Попробуйте позже.';
+      document.getElementById('statusMessage').textContent = 'Ошибка отправки. Попробуйте позже.';
+      console.error('EmailJS error:', err);
     });
   });
 </script>
