@@ -35,6 +35,7 @@ body {
   border-radius: 0!important;
   margin: 0 1vw!important;
   color:#000!important;
+  padding-left: 20px;
  }
 .nav-link.active {
  background-color: #1ed65b!important;
