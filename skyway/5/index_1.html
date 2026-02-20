@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
   <title>Playable Skyway 5</title>
   <style>
     :root {
@@ -30,7 +30,7 @@
     #app {
       position: relative;
       width: 100vw;
-      height: 100vh;
+      height: var(--app-h, 100dvh);
       overflow: hidden;
       background: linear-gradient(180deg, #bde8f8 0%, #b6e2f4 100%);
     }
@@ -39,7 +39,7 @@
       position: absolute;
       left: 50%;
       width: 100vw;
-      height: 100vh;
+      height: var(--app-h, 100dvh);
       transform: translateX(-50%);
       overflow: hidden;
     }
@@ -52,7 +52,7 @@
       width: 90%!important;
     }
       #scene {
-        width: min(calc(100vw - 40px), calc((100vh - 40px) * 0.68));
+        width: min(calc(100vw - 40px), calc((var(--app-h, 100dvh) - 40px) * 0.68));
       }
     }
 
@@ -472,7 +472,7 @@
 <body>
   <div id="app">
     <div class="level">Level 23</div>
-    <div class="fig-counter" id="figCounter">Boxes 0</div>
+    <div class="fig-counter" id="figCounter">Boxes 20</div>
     <div id="scene">
       <div class="lane-wrap" id="laneWrap">
         <div class="lane left"></div>
@@ -707,6 +707,7 @@
         const failBtn = endcardFail ? endcardFail.querySelector(".pexshot-btn") : null;
         if (failBtn) {
           failBtn.src = embeddedAssets.taButton;
+          failBtn.dataset.action = "restart";
         }
       }
 
@@ -1707,10 +1708,17 @@
       }
 
       function onResize() {
+        updateViewportHeightVar();
         layoutFigures(true);
       }
 
+      function updateViewportHeightVar() {
+        const viewportH = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        document.documentElement.style.setProperty("--app-h", `${Math.round(viewportH)}px`);
+      }
+
       function init() {
+        updateViewportHeightVar();
         buildGrid();
         figureLayer.innerHTML = "";
         figures = buildFigureDefs().map(createFigure);
@@ -1732,9 +1740,19 @@
         window.addEventListener("pointerup", onPointerUp, { passive: true });
         window.addEventListener("pointercancel", onPointerUp, { passive: true });
         window.addEventListener("resize", onResize);
+        window.addEventListener("orientationchange", onResize);
+        if (window.visualViewport) {
+          window.visualViewport.addEventListener("resize", onResize);
+          window.visualViewport.addEventListener("scroll", onResize);
+        }
 
         ctaButtons.forEach((btn) => {
-          btn.addEventListener("click", () => {
+          btn.addEventListener("click", (e) => {
+            if (btn.dataset.action === "restart") {
+              e.preventDefault();
+              window.location.reload();
+              return;
+            }
             window.open("https://example.com", "_blank");
           });
         });
